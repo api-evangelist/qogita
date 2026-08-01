@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+status: published
+source: >-
+  https://api.qogita.com/.well-known/oauth-protected-resource/staff/mcp
+  (RFC 9728) + WWW-Authenticate challenge on https://api.qogita.com/staff/mcp
+server:
+  name: Qogita Staff MCP - Production
+  transport: http
+  url: https://api.qogita.com/staff/mcp
+auth:
+  type: oauth2
+  # OAuth 2.1 authorization-code + PKCE, per RFC 8414 authorization server metadata
+  authorization_server: https://api.qogita.com
+  authorization_endpoint: https://api.qogita.com/staff/oauth/authorize
+  token_endpoint: https://api.qogita.com/staff/oauth/token
+  registration_endpoint: https://api.qogita.com/staff/oauth/register
+  grant_types: [authorization_code, refresh_token]
+  code_challenge_methods: [S256]
+  scopes_supported: [staff:mcp]
+  bearer_methods_supported: [header]
+resource:
+  resource: https://api.qogita.com/staff/mcp
+  resource_name: Qogita Staff MCP - Production
+  authorization_servers: [https://api.qogita.com]
+tools: []
+notes: >-
+  A live, OAuth-protected hosted MCP server. Unauthenticated requests return
+  401 with a WWW-Authenticate Bearer challenge pointing at the protected-resource
+  metadata. The single advertised scope is staff:mcp (internal staff surface);
+  the tool list is not enumerable without authorization, so tools[] is left empty
+  rather than fabricated.

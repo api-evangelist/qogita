@@ -1,0 +1,19 @@
+generated: '2026-07-20'
+method: searched
+source: https://status.qogita.com/
+status_page: https://status.qogita.com/
+versioning:
+  scheme: unknown
+  note: >-
+    Qogita's REST API is documented at developers.qogita.com (hosted Notion
+    portal); no machine-readable versioning or deprecation policy was found.
+deprecation:
+  policy_url: null
+  sunset_header: null
+sla:
+  url: null
+deprecated_operations: []
+notes: >-
+  Only the public status page (status.qogita.com, "Qogita Status Page") was
+  verified live. No deprecation policy, SLA page, or downloadable OpenAPI was
+  found, so those fields are null rather than fabricated.

@@ -1,0 +1,19 @@
+generated: '2026-07-20'
+method: searched
+source: https://api.qogita.com/.well-known/oauth-authorization-server
+schemes:
+- name: OAuth2
+  source: well-known/qogita-oauth-authorization-server.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.qogita.com/staff/oauth/authorize
+    tokenUrl: https://api.qogita.com/staff/oauth/token
+scopes:
+- scope: staff:mcp
+  description: Access to the Qogita Staff MCP server (Production).
+  flows: [authorizationCode]
+  sources: [well-known/qogita-oauth-authorization-server.json]
+notes: >-
+  Single scope advertised by the authorization server metadata. This scope
+  governs the hosted MCP resource; Qogita's public REST API does not publish a
+  machine-readable scope reference.

@@ -1,0 +1,1 @@
+{"resource": "https://api.qogita.com/staff/mcp", "resource_name": "Qogita Staff MCP - Production", "authorization_servers": ["https://api.qogita.com"], "scopes_supported": ["staff:mcp"], "bearer_methods_supported": ["header"]}

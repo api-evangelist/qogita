@@ -1,8 +1,14 @@
 aid: qogita
 name: Qogita
-description: 'Qogita is a company surfaced as a portfolio company of accel, bessemer-venture-partners
-  and added to the API Evangelist network as a stub for enrichment. Sector: ecommerce. This profile is
-  a lead awaiting the enrichment pipeline.'
+description: >-
+  Qogita is Europe's B2B wholesale marketplace for the health and beauty
+  sector, connecting retailers to a combined catalog of more than 500 suppliers
+  and distributors and over 10,000 brands with guaranteed authenticity for EU
+  and UK retail. Qogita handles sourcing, ordering, payment, and logistics
+  across borders, and exposes a REST API at api.qogita.com (documented at
+  developers.qogita.com) alongside a hosted, OAuth-protected Model Context
+  Protocol (MCP) server for agent access. The company is backed by Accel and
+  Bessemer Venture Partners.
 url: https://raw.githubusercontent.com/api-evangelist/qogita/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,13 +17,44 @@ x-backed-by:
 - bessemer-venture-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Ecommerce
-apis: []
+- Wholesale
+- Marketplace
+- Health and Beauty
+- B2B
+- Retail
+- Distribution
+image: https://www.qogita.com/
+apis:
+- name: Qogita API
+  description: >-
+    Qogita's REST API for retailers and integration partners on api.qogita.com,
+    covering catalog, ordering, and fulfilment workflows. Documented via the
+    developer portal (hosted on Notion).
+  humanURL: https://developers.qogita.com/
+  baseURL: https://api.qogita.com
+  properties:
+  - type: Documentation
+    url: https://developers.qogita.com/
+  - type: MCPServer
+    url: mcp/qogita-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -26,3 +63,42 @@ maintainers:
 common:
 - type: Website
   url: https://www.qogita.com/
+- type: DeveloperPortal
+  url: https://developers.qogita.com/
+- type: Documentation
+  url: https://developers.qogita.com/
+- type: Blog
+  url: https://www.qogita.com/blog
+- type: Support
+  url: https://help.qogita.com/
+- type: HelpCenter
+  url: https://help.qogita.com/
+- type: StatusPage
+  url: https://status.qogita.com/
+- type: PrivacyPolicy
+  url: https://www.qogita.com/legal/privacy
+- type: Login
+  url: https://www.qogita.com/login
+- type: GitHubOrganization
+  url: https://github.com/qogita
+- type: MCPServer
+  url: mcp/qogita-mcp.yml
+- type: WellKnown
+  url: well-known/qogita-well-known.yml
+- type: Authentication
+  url: authentication/qogita-authentication.yml
+- type: OAuthScopes
+  url: scopes/qogita-scopes.yml
+- type: Conformance
+  url: conformance/qogita-conformance.yml
+- type: Lifecycle
+  url: lifecycle/qogita-lifecycle.yml
+- type: LLMsTxt
+  url: llms/qogita-llms.txt
+- type: DomainSecurity
+  url: security/qogita-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 10
+  pass: local-v1

@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of Qogita host /.well-known/ discovery surface
+hosts:
+- host: https://api.qogita.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: qogita-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: qogita-oauth-authorization-server.json
+  - path: /.well-known/oauth-protected-resource/staff/mcp
+    status: 200
+    file: qogita-oauth-protected-resource-staff-mcp.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+- host: https://www.qogita.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://developers.qogita.com
+  documents:
+  # developer portal is a Cloudflare 301 redirect to a hosted Notion page;
+  # /.well-known/security.txt and /openapi.json both 301 to the Notion doc, not real docs.
+  - path: /.well-known/security.txt
+    status: 301
+    note: redirects to qogita.notion.site (no real security.txt)
+notes: >-
+  api.qogita.com publishes RFC 8414 OAuth Authorization Server Metadata,
+  OpenID Connect discovery, and RFC 9728 OAuth Protected Resource Metadata for
+  its hosted MCP server. No security.txt or api-catalog is published.
